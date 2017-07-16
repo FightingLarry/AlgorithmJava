@@ -29,7 +29,7 @@ public class MaxSubSum {
     }
 
     /**
-     * 分治算法，
+     * 分治算法，2的N次方个元素才有效。
      * 
      * @param a
      * @return
