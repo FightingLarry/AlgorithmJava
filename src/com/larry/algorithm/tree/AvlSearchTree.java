@@ -8,7 +8,7 @@ public class AvlSearchTree<T extends Comparable<? super T>> extends
 	}
 
 	@Override
-	protected BinaryNode<T> insert(T e, BinaryNode<T> root) {
+	protected AvlNode<T> insert(T e, BinaryNode<T> root) {
 		if (root == null) {
 			return new AvlNode<T>(e, null, null);
 		}
