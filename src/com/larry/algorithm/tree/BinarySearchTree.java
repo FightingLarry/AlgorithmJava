@@ -2,7 +2,7 @@ package com.larry.algorithm.tree;
 
 public class BinarySearchTree<T extends Comparable<? super T>> {
 
-	protected BinaryNode<T> mRoot;
+	private BinaryNode<T> mRoot;
 
 	public BinarySearchTree() {
 		super();
@@ -43,6 +43,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 		if (isEmpty()) {
 			System.out.println("Emprty tree!!!");
 		} else {
+			System.out.println("========================");
 			printTree(mRoot);
 		}
 	}
@@ -94,7 +95,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 		return root;
 	}
 
-	protected BinaryNode<T> insert(T e, BinaryNode<T> root) {
+	private BinaryNode<T> insert(T e, BinaryNode<T> root) {
 		if (root == null) {
 			return new BinaryNode<>(e);
 		}
@@ -148,7 +149,9 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 
 		if (root != null) {
 			printTree(root.getLeft());
-			System.out.println(root.getElement());
+			System.out.println(root.element + " ("
+					+ (root.left == null ? "null" : root.left.element) + ","
+					+ (root.right == null ? "null" : root.right.element) + ")");
 			printTree(root.getRight());
 		}
 
