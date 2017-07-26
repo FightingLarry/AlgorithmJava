@@ -8,7 +8,7 @@ public class ShellSort {
 	 * @param a
 	 */
 	public static <T extends Comparable<? super T>> void shellSort(T[] a) {
-		int j = 0;
+		int j;
 		for (int gap = a.length / 2; gap > 0; gap /= 2) {
 			System.out.println("========1.gap=" + gap);
 			for (int i = gap; i < a.length; i++) {
