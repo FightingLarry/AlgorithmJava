@@ -11,13 +11,12 @@ public class QuickSort {
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i] + ",");
 		}
-		System.out.println();
 	}
 
 	public static void quickSort(int[] list, int low, int high) {
 		if (low < high) {
 			int middle = getMiddle(list, low, high); // 将list 数组进行一分为二
-			System.out.println(middle+":middle");
+			System.out.println(middle + ":middle");
 			quickSort(list, low, middle - 1); // 对低字表进行递归排序
 			quickSort(list, middle + 1, high); // 对高字表进行递归排序
 		}
